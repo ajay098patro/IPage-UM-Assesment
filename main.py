@@ -45,4 +45,4 @@ def get_features(tenant_id: int, epoch_start: int, epoch_end: int, epsg: int = 4
     conn.close()
     return {"type": "FeatureCollection", "features": features}
 
-app.mount("/", StaticFiles(directory=".", html=True), name="frontend")
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
